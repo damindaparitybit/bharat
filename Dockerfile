@@ -1,6 +1,6 @@
 FROM centos:7
 
-RUN yum install epel-release -y && yum update -y && yum install httpd -y && yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y && yum install yum-utils -y && yum-config-manager --enable remi-php74 && yum install php php-bz2 php-ctype php-mcrypt php-cli php-gd php-mbstring php-common php-curl php-mysql php-ldap php-zip php-fileinfo -y
+RUN yum install epel-release -y && yum update -y && yum install httpd -y && yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y && yum install yum-utils -y && yum-config-manager --enable remi-php74 && yum install php php-cli php-gd php-common -y
 
 COPY ./index.php /var/www/html
 
