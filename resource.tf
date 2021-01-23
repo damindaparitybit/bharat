@@ -42,3 +42,6 @@ resource "aws_security_group" "allow_tls" {
   }
 }
 
+output "instanceip" {
+  value = "aws_instance.web.public_ip"
+  }
