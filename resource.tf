@@ -8,7 +8,7 @@ resource "aws_instance" "web" {
     Name = "phpdemoserver"
   }
   provisioner "local-exec" {
-    command = "echo ${aws_instance.web.public_ip} > inventory"
+    command = "echo ${aws_instance.web.public_ip} >> inventory"
   }
 }
 
