@@ -8,7 +8,7 @@ resource "aws_instance" "web" {
     Name = "phpdemoserver"
   }
   provisioner "local-exec" {
-    command = "echo ${aws_instance.web.public_ip} >> ip.txt"
+    command = "echo ${aws_instance.web.public_ip} > inventory"
   }
 }
 
@@ -43,5 +43,5 @@ resource "aws_security_group" "allow_tls" {
 }
 
 output "instanceip" {
-  value = "${aws_instance.web.public_ip}"
+  value = aws_instance.web.public_ip
   }
