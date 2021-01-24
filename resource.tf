@@ -1,7 +1,7 @@
 resource "aws_instance" "web" {
   ami                    = "ami-04b1ddd35fd71475a"
   instance_type          = "t2.micro"
-  key_name               = "phpdemo"
+  key_name               = "phpapplication"
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
 
   tags = {
